@@ -1,5 +1,5 @@
 FROM golang:1.9.1
 WORKDIR /go-builder/
 COPY hello-world.go .
-RUN CGO_ENABLED=0 GOOS=linux go build -o hello-world .
+RUN go build -o hello-world .
 CMD ["./hello-world"]
